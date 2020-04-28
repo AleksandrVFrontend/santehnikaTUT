@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Сантехника ТУТ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">  
+        <link rel="apple-touch-icon" sizes="144x144" href="build/resources/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="build/resources/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="build/resources/favicon-16x16.png">
+        <link rel="manifest" href="build/resources/site.webmanifest">
+        <link rel="mask-icon" href="build/resources/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="stylesheet" type="text/css" href="build/css/main.min.css">
+        <script src="build/js/all.js" defer></script>
+    </head>
+
+    <body>
+        <div class="popup display__none">
+            <form class="popup__el flex-container">
+                <h2 class="popup__el__h2">Оставьте данные <div class="btn-popup__close">+</div></h2>
+                <label for="tel">Ваш номер</label>
+                <input type="text" id="tel" onchange="handlerChange('tel')">
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" onchange="handlerChange('name')">
+                <button type="submit" id="button">Отправить</button>
+                <label class="check_form">
+                    <input type="checkbox">
+                    <span>Нажатием на клавишу вы соглашаетесь с обработкой персональных данных</span>
+                </label>
+            </form>
+
+        </div>
+       <header>
+           <div class="bar">
+               <div class="header__photo">
+                   <img src="build/img/French.png" alt="French">
+                   <img src="build/img/Grone.png" alt="Grone">
+               </div>
+           </div>
+       </header>
+
+       <main>
+           <div class="fixed-container">
+            <section class="section-main">
+                <div class="flex-container section-main__container">
+                        <div class="section-main__comp font-img">
+                            <h1 class="section-main__main-title" onmouseout ="mouseout('.section-main__main-title')">Сантехника <span onmouseout ="mouseout('.section-main__main-title span')">ТУТ</span></h1>
+                            <span class="section-main__title" onmouseout ="mouseout('.section-main__title')">Интернет-магазин сантехники</span>
+                        </div>
+                        <div class="section-main__comp copm-position">
+                            <a href="tel:+7903111-11-11" class="section-main__tel" onmouseout ="mouseout('.section-main__tel')">89456003423</a><br>
+                            <span class="section-main__title" onmouseout ="mouseout('.section-main__tel')">Каждый день с 9 до 22</span>
+                            <button class="btn position-btn" onmouseout ="mouseout('.btn')">Заказать звонок</button>
+                        </div>
+
+                        <div class="section-main__comp">
+                            <span class="grone">GRONE</span>
+                        </div>
+                    </div> 
+                    <div class="section-main__container-img">
+                    <img src="build/img/img__1.png" class="section-main__main-photo" alt="img__1"> 
+                    </div>
+            </section>
+
+            <section class="section-menu">
+                <div class="section-menu__container">
+                    <h3 class="section-menu__title">Популярные товарные разделы</h3>
+                    <a class="prev" onclick="minusSlide()">&#10094;</a>
+                    <a class="next" onclick="plusSlide()">&#10095;</a>
+                    <ul class="section-menu__swiper flex-container">
+                        <li class="section-menu__swiper__block block__0" id="fauces">
+                                <img src="build/img/fauces.png" alt="fauces">
+                                <div class="block-title">
+                                    <span>Смесители</span>
+                                </div>
+                        </li>
+                            <li class="section-menu__swiper__block block__0">
+                                <img src="build/img/bath.png" alt="bath">
+                                <div class="block-title">
+                                    <span>Ванны</span>
+                                </div>
+                        </li>
+                        <li class="section-menu__swiper__block block__0" id="cranes">
+                                <img src="build/img/cranes.png" alt="cranes">
+                                <div class="block-title">
+                                    <span>Раковины</span>
+                                </div>
+                        </li>
+                        <li class="section-menu__swiper__block block__0" id="dry">
+                                <img src="build/img/dry.png" alt="dry">
+                                <div class="block-title">
+                                    <span>Полотенцосушители</span>
+                                </div>
+                        </li>
+                    </ul>
+                    <div class="slider-dots">
+                        <span class="slider-dots_item dots__item__0" onclick="currentSlide(1)"></span> 
+                        <span class="slider-dots_item dots__item__0" onclick="currentSlide(2)"></span> 
+                        <span class="slider-dots_item dots__item__0" onclick="currentSlide(3)"></span> 
+                        <span class="slider-dots_item dots__item__0" onclick="currentSlide(4)"></span> 
+                    </div>  
+                </div>
+            </section>
+
+            <section class="section-menu">
+                <div class="section-menu__container">
+                    <h3 class="section-menu__title">Популярные коллекции</h3>
+                    <a class="prev" onclick="minusSlide1()">&#10094;</a>
+                    <a class="next" onclick="plusSlide1()">&#10095;</a>
+                    <ul class="section-menu__swiper flex-container">
+                        <li class="section-menu__swiper__block block__1">
+                            <img src="build/img/rosmari.png" alt="rosmari">
+                            <div class="block-title">
+                                <span>Розмари</span>
+                            </div>
+                        </li>
+                        <li class="section-menu__swiper__block block__1">
+                            <img src="build/img/klaida.png" alt="klaida">
+                            <div class="block-title">
+                                <span>Клайда</span>
+                            </div>
+                        </li>
+                        <li class="section-menu__swiper__block block__1">
+                            <img src="build/img/suon.png" alt="suon">
+                            <div class="block-title">
+                                <span>Суон</span>
+                            </div>
+                        </li>
+                        <li class="section-menu__swiper__block block__1">
+                            <img src="build/img/cont.png" alt="cont">
+                            <div class="block-title">
+                                <span>Контемпрори</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="slider-dots dots__1">
+                        <span class="slider-dots_item dots__item__1" onclick="currentSlide1(1)"></span> 
+                        <span class="slider-dots_item dots__item__1" onclick="currentSlide1(2)"></span> 
+                        <span class="slider-dots_item dots__item__1" onclick="currentSlide1(3)"></span> 
+                        <span class="slider-dots_item dots__item__1" onclick="currentSlide1(4)"></span> 
+                    </div> 
+                </div>
+            </section>
+
+            <section class="section-menu">
+                <div class="section-menu__container">
+                    <h3 class="section-menu__title" id="bath">Спец предложения</h3>
+                    <a class="prev prev__0" onclick="minusSlide2()">&#10094;</a>
+                    <a class="next next__0" onclick="plusSlide2()">&#10095;</a>
+                    <ul class="section-menu__swiper flex-container">
+                        <li class="section-menu__swiper__block-offer block__2">
+                            <div class="block-offer__img">
+                                <img src="build/img/bath__profile.png" class="block-offer__img__product" alt="bath__profile">
+                                <div class="block-offer__img__descr-one">Бесплатная доставка</div>
+                                <div class="block-offer__img__descr-two">лидер продаж</div>
+                            </div>
+                            <ul class="block-offer__descript">
+                                <li>
+                                    <iframe class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe class="iframe" src="build/img/star.svg"></iframe>
+
+                                    <a href="">Отзывы: 0</a>
+                                </li>
+                                <li class="block-offer__descript__name-product">
+                                    Душевая система Tropic LM7002C
+                                </li>
+                                <li class="block-offer__descript__country font-img">
+                                    Чехия
+                                </li>
+                            </ul>
+                            <div class="block-offer__price flex-container">
+                                <div>15830 РУБ</div>
+                                <button class="btn__price" onmouseout ="mouseout('.btn__price')">Подробнее</button>
+                                <iframe class="iframe__2" src="build/img/cor.svg"></iframe>
+                                <iframe class="iframe__3" src="build/img/libra.svg"></iframe>
+                            </div>
+                        </li>
+                        <li class="section-menu__swiper__block-offer  block__2">
+                            <div class="block-offer__img">
+                                <img src="build/img/bath__profile.png" class="block-offer__img__product" alt="bath__profile">
+                                <div class="block-offer__img__descr-one">Бесплатная доставка</div>
+                                <div class="block-offer__img__descr-two">лидер продаж</div>
+                                <div class="block-offer__img__descr-three">На складе</div>
+                            </div>
+                            <ul class="block-offer__descript">
+                                <li>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+                        
+                                    <a href="#">Отзывы: 0</a>
+                                </li>
+                                <li class="block-offer__descript__name-product">
+                                    Душевая система Tropic LM7002C
+                                </li>
+                                <li class="block-offer__descript__country font-img">
+                                    Чехия
+                                </li>
+                            </ul>
+                            <div class="block-offer__price">
+                                <div>15830 РУБ</div>
+                                <button class="btn__price" onmouseout ="mouseout('.btn__price')">Подробнее</button>
+                                <iframe class="iframe__2" src="build/img/cor.svg"></iframe>
+                                <iframe class="iframe__3" src="build/img/libra.svg"></iframe>
+                                
+                            </div>
+                        </li>
+                        <li class="section-menu__swiper__block-offer  block__2">
+                            <div class="block-offer__img">
+                                <img src="build/img/bath__profile.png" class="block-offer__img__product" alt="bath__profile">
+                                <div class="block-offer__img__descr-one">Бесплатная доставка</div>
+                                <div class="block-offer__img__descr-two">лидер продаж</div>
+                                <div class="block-offer__img__descr-three">На складе</div>
+                            </div>
+                            <ul class="block-offer__descript">
+                                <li>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+
+                                    <a href="">Отзывы: 0</a>
+                                </li>
+                                <li class="block-offer__descript__name-product">
+                                    Душевая система Tropic LM7002C
+                                </li>
+                                <li class="block-offer__descript__country font-img">
+                                    Чехия
+                                </li>
+                            </ul>
+                            <div class="block-offer__price">
+                                <div>15830 РУБ</div>
+                                <button class="btn__price" onmouseout ="mouseout('.btn__price')">Подробнее</button>
+                                <iframe class="iframe__2" src="build/img/cor.svg"></iframe>
+                                <iframe class="iframe__3" src="build/img/libra.svg"></iframe>
+                                
+                            </div>
+                        </li>
+                        <li class="section-menu__swiper__block-offer  block__2">
+                            <div class="block-offer__img">
+                                <img src="build/img/bath__profile.png" class="block-offer__img__product" alt="bath__profile">
+                                <div class="block-offer__img__descr-one">Бесплатная доставка</div>
+                                <div class="block-offer__img__descr-two">лидер продаж</div>
+                            </div>
+                            <ul class="block-offer__descript">
+                                <li>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+                                    <iframe  class="iframe" src="build/img/star.svg"></iframe>
+
+                                    <a href="">Отзывы: 0</a>
+                                </li>
+                                <li class="block-offer__descript__name-product">
+                                    Акриловая ванна Aquenet Bright 
+                                </li>
+                                <li class="block-offer__descript__country font-img">
+                                    Чехия
+                                </li>
+                            </ul>
+                            <div class="block-offer__price">
+                                <div>15830 РУБ</div>
+                                <button class="btn__price" onmouseout ="mouseout('.btn__price')">Подробнее</button>
+                                <iframe class="iframe__2" src="build/img/cor.svg"></iframe>
+                                <iframe class="iframe__3" src="build/img/libra.svg"></iframe>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="slider-dots dots__2">
+                        <span class="slider-dots_item dots__item__2" onclick="currentSlide2(1)"></span> 
+                        <span class="slider-dots_item dots__item__2" onclick="currentSlide2(2)"></span> 
+                        <span class="slider-dots_item dots__item__2" onclick="currentSlide2(3)"></span> 
+                        <span class="slider-dots_item dots__item__2" onclick="currentSlide2(4)"></span> 
+                    </div> 
+                </div>
+            </section>
+
+            <section class="section-menu">
+                <div class="section-menu__container border-bottom">
+                    <h3 class="section-menu__title marginLeft-91">Дизайн - название инфоблока</h3>
+                    <ul class="section-menu__swiper flex-container">
+                    <li>
+                        <img src="build/img/catchen.png" alt="catchen">
+                    </li>
+                    <li class="block-text">
+                        <div class="text">
+                                <span>Grohe производит смесители и душевые гарнитуры для ванной комнаты и кухни, автоматические и электронные смесители общественного и коммерческого назначения, 
+                                    системы инсталляции и смыва для подвесной сантехники, системы скрытого настенного монтажа.</span><br><br>
+                                <span>На долю Grohe AG приходится примерно 8 % мирового рынка. </span><br><br>
+                                <span>В 2007 году объём продаж выпускаемой Grohe сантехнической арматуры для кухонь, ванн и душа, автоматической арматуры для коммерческого и общественного секторов, 
+                                    а также инсталляционных и смывных систем составил около 1,02 млрд евро.</span><br><br>
+                                <span>У Grohe 6 производственных площадок, две из которых находятся за рубежом, в частности в 
+                                    Португалии и Таиланде. Компания реализует более 82 % выпускаемой продукции за пределами Германии. По всему миру на предприятиях Grohe работает около 5000 человек.</span>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section-menu">
+                <div class="section-menu__container">
+                    <h3 class="section-menu__title marginLeft-91">Технология - название инфоблока 2</h3>
+                    <ul class="section-menu__swiper flex-container">  
+                    <li>
+                        <div class="text">
+                                <span>Grohe производит смесители и душевые гарнитуры для ванной комнаты и кухни, автоматические и электронные смесители общественного и коммерческого назначения, 
+                                    системы инсталляции и смыва для подвесной сантехники, системы скрытого настенного монтажа.</span><br><br>
+                                <span>На долю Grohe AG приходится примерно 8 % мирового рынка. </span><br><br>
+                                <span>В 2007 году объём продаж выпускаемой Grohe сантехнической арматуры для кухонь, ванн и душа, автоматической арматуры для коммерческого и общественного секторов, 
+                                    а также инсталляционных и смывных систем составил около 1,02 млрд евро.</span><br><br>
+                                <span>У Grohe 6 производственных площадок, две из которых находятся за рубежом, в частности в 
+                                    Португалии и Таиланде. Компания реализует более 82 % выпускаемой продукции за пределами Германии. По всему миру на предприятиях Grohe работает около 5000 человек.</span>
+                        </div>
+                    </li>
+                        <li class="block-text">
+                            <img src="build/img/catchen.png" alt="catchen">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            </div>
+       </main>
+
+       <footer class="footer">
+           <div class="bar">
+               <div class="footer__container flex-container fixed-container">
+                   <ul class="footer__comp-one">
+                       <li class="footer__title">Популярные группы </li>
+                       <li><a href="#cranes">Раковины</a></li>
+                       <li><a href="#fauces">Смесители</a></li>
+                       <li><a href="#dry">Полотенцесушители</a></li>
+                       <li><a href="#bath">Ванны</a></li>
+                   </ul>
+                   <ul class="footer__comp-two">
+                       <li class="footer__title">Информация</li>
+                       <li>Интернет-магазин </li>
+                       <li>Сантехника-Тут является</li>
+                       <li>официальным дистрибьютером</li>
+                       <li>продуции немецкой комании</li>
+                       <li>Грое в России.</li>
+                   </ul>
+                   <ul class="footer__comp-three">
+                       <li class="footer__title">Контакты</li>
+                       <li>
+                          <a href="tel:+7903111-11-11">8 800 555-66-13</a> 
+                          <div>Бесплатные звонки по России</div> 
+                       </li>
+                       <li>
+                           <a href="tel:+7903111-11-11">8 495 565-35-25 </a>
+                           <div>Многоканальный номер</div>
+                       </li>
+                       <li>
+                           <a href="tel:+7903111-11-11"> 8 812 748-28-77</a>
+                           <div>Офис продаж в Санкт-Петербурге</div>
+                       </li>
+                       <li>
+                           <a href="tel:+7903111-11-11">8 861 205-25-67</a>
+                           <div>Офис продаж в Краснодаре</div>
+                       </li>
+                       <li>
+                           <a href="tel:+7903111-11-11">8 863 322-00-18</a>
+                           <div>Офис продаж в Ростове-на-Дону</div>
+                       </li>
+                   </ul>
+                   <ul  class="footer__comp-four">
+                       <li class="footer__title">Продавец </li>
+                       <li>Сантехника-Тут </li>
+                       <li>ООО «Элит Групп» </li>
+                       <li>ОГРН 1115029005123 </li>
+                       <li>ИНН 5029152090</li>
+                   </ul>
+                </div>
+
+                <div class="footer-foo">
+                    <span>Сайт носит исключительно информационный характер, и ни при каких условиях не является публичной офертой, определяемой положениями статьи</span>
+                </div>
+           </div>
+       </footer>
+    </body>
+</html>
